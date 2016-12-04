@@ -1,0 +1,20 @@
+﻿@model IEnumerable<Vidly.Models.Customer>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Customers</h1>
+
+
+<div class="panel panel-default">
+    <div class="panel-heading">Customer</div>
+    <ul class="list-group">
+        @foreach (var item in Model) {
+            <li class="list-group-item">
+                @Html.ActionLink(item.Name, "Details", "Customers")
+            </li>
+        }
+    </ul>
+</div>
