@@ -25,7 +25,10 @@ namespace Vidly.Controllers {
         }
 
         public ActionResult Details(int id) {
-            return View(Customers.First(c => c.Id == id));
+            var customer = Customers.SingleOrDefault(x => x.Id == id);
+            if (customer == null)
+                return HttpNotFound();
+            return View(customer);
         }
     }
 }
