@@ -8,17 +8,25 @@ using Vidly.ViewModels;
 
 namespace Vidly.Controllers {
     public class MoviesController : Controller {
+        private static IEnumerable<Movie> Movies = new[] {
+            new Movie {
+                Name = "Shrek",
+                Id = 1
+            },
+            new Movie {
+                Name = "Finding Dory",
+                Id = 2
+            },
+        };
+
         // GET: Movies
         public ActionResult Random() {
-            var movie = new Movie() {
-                Name = "Shrek!"
-            };
             var customers = new List<Customer> {
                 new Customer {Name = "Customer 1"},
                 new Customer {Name = "Customer 2"}
             };
             var viewModel = new RandomMovieViewModel {
-                Movie = movie,
+                Movie = Movies.First(),
                 Customer = customers
             };
             return View(viewModel);
@@ -34,13 +42,8 @@ namespace Vidly.Controllers {
         }
 
         //Movies
-        public ActionResult Index(int? pageIndex, string sortBy) {
-            if (!pageIndex.HasValue)
-                pageIndex = 1;
-            if (string.IsNullOrWhiteSpace(sortBy))
-                sortBy = "Name";
-
-            return Content($"pageIndex={pageIndex}&sortBy={sortBy}");
+        public ActionResult Index() {
+            return View(Movies);
         }
     }
 }
