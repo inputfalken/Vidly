@@ -25,7 +25,7 @@ namespace Vidly.Controllers {
         }
 
         public ActionResult Details(int id) {
-            throw new NotImplementedException();
+            return View(Customers.First(c => c.Id == id));
         }
     }
 }
