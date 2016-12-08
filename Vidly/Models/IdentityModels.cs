@@ -31,5 +31,6 @@ namespace Vidly.Models
         {
             return new ApplicationDbContext();
         }
+
     }
 }

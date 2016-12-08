@@ -180,7 +180,12 @@
     <Compile Include="Migrations\201612082346031_AddIsSubscribedToCustomer.Designer.cs">
       <DependentUpon>201612082346031_AddIsSubscribedToCustomer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612082356592_AddMemberShipType.cs" />
+    <Compile Include="Migrations\201612082356592_AddMemberShipType.Designer.cs">
+      <DependentUpon>201612082356592_AddMemberShipType.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\MembershipType.cs" />
     <Compile Include="ViewModels\RandomMovieViewModel.cs" />
     <Content Include="Content\bootstrap-lumen.css" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -280,6 +285,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612082346031_AddIsSubscribedToCustomer.resx">
       <DependentUpon>201612082346031_AddIsSubscribedToCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612082356592_AddMemberShipType.resx">
+      <DependentUpon>201612082356592_AddMemberShipType.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
