@@ -176,6 +176,10 @@
     <Compile Include="Migrations\201612082343257_AddMovieEntity.Designer.cs">
       <DependentUpon>201612082343257_AddMovieEntity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612082346031_AddIsSubscribedToCustomer.cs" />
+    <Compile Include="Migrations\201612082346031_AddIsSubscribedToCustomer.Designer.cs">
+      <DependentUpon>201612082346031_AddIsSubscribedToCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="ViewModels\RandomMovieViewModel.cs" />
     <Content Include="Content\bootstrap-lumen.css" />
@@ -273,6 +277,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612082343257_AddMovieEntity.resx">
       <DependentUpon>201612082343257_AddMovieEntity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612082346031_AddIsSubscribedToCustomer.resx">
+      <DependentUpon>201612082346031_AddIsSubscribedToCustomer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
