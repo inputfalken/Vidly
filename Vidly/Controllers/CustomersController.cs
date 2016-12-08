@@ -21,7 +21,7 @@ namespace Vidly.Controllers {
 
         // GET: Customers
         public ActionResult Index() {
-            return View(Customers);
+            return View(new List<Customer>());
         }
 
         public ActionResult Details(int id) {
