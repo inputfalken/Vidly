@@ -184,6 +184,10 @@
     <Compile Include="Migrations\201612082356592_AddMemberShipType.Designer.cs">
       <DependentUpon>201612082356592_AddMemberShipType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612082358491_PopulateMembershipTypes.cs" />
+    <Compile Include="Migrations\201612082358491_PopulateMembershipTypes.Designer.cs">
+      <DependentUpon>201612082358491_PopulateMembershipTypes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="ViewModels\RandomMovieViewModel.cs" />
@@ -288,6 +292,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612082356592_AddMemberShipType.resx">
       <DependentUpon>201612082356592_AddMemberShipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612082358491_PopulateMembershipTypes.resx">
+      <DependentUpon>201612082358491_PopulateMembershipTypes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
