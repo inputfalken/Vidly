@@ -8,13 +8,18 @@
 <h1>Customers</h1>
 
 
-<div class="panel panel-default">
-    <div class="panel-heading">Customer</div>
-    <ul class="list-group">
-        @foreach (var item in Model) {
-            <li class="list-group-item">
-                @Html.ActionLink(item.Name, "Details", "Customers", new {id = item.Id}, null)
-            </li>
-        }
-    </ul>
-</div>
+@if (Model.Any()) {
+    <div class="panel panel-default">
+        <div class="panel-heading">Customer</div>
+        <ul class="list-group">
+            @foreach (var item in Model) {
+                <li class="list-group-item">
+                    @Html.ActionLink(item.Name, "Details", "Customers", new {id = item.Id}, null)
+                </li>
+            }
+        </ul>
+    </div>
+}
+else {
+    <p>We don't have any customers yet</p>
+}
