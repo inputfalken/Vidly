@@ -192,6 +192,14 @@
     <Compile Include="Migrations\201612111309480_ApplyAnnotationsToCustomerName.Designer.cs">
       <DependentUpon>201612111309480_ApplyAnnotationsToCustomerName.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201612111353481_AddsNameToMemberShipType.cs" />
+    <Compile Include="Migrations\201612111353481_AddsNameToMemberShipType.Designer.cs">
+      <DependentUpon>201612111353481_AddsNameToMemberShipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612111354559_UpdateMemberShipTypesWithName.cs" />
+    <Compile Include="Migrations\201612111354559_UpdateMemberShipTypesWithName.Designer.cs">
+      <DependentUpon>201612111354559_UpdateMemberShipTypesWithName.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\MembershipType.cs" />
     <Compile Include="ViewModels\RandomMovieViewModel.cs" />
@@ -302,6 +310,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612111309480_ApplyAnnotationsToCustomerName.resx">
       <DependentUpon>201612111309480_ApplyAnnotationsToCustomerName.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612111353481_AddsNameToMemberShipType.resx">
+      <DependentUpon>201612111353481_AddsNameToMemberShipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612111354559_UpdateMemberShipTypesWithName.resx">
+      <DependentUpon>201612111354559_UpdateMemberShipTypesWithName.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
