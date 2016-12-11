@@ -1,34 +1,40 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Vidly.Models;
 
-namespace Vidly.Controllers {
-    public class CustomersController : Controller {
-        private static readonly IEnumerable<Customer> Customers = new[] {
-            new Customer {
-                Name = "Joe",
-                Id = 1
-            },
-            new Customer {
-                Name = "Bob",
-                Id = 2
-            },
-        };
+namespace Vidly.Controllers
+{
+    public class CustomersController : Controller
+    {
+        private readonly ApplicationDbContext _context;
+
+        public CustomersController()
+        {
+            _context = new ApplicationDbContext();
+        }
 
 
         // GET: Customers
-        public ActionResult Index() {
-            return View(new List<Customer>());
+        public ActionResult Index()
+        {
+            var contextCustomers = _context.Customers.ToArray();
+            return View(contextCustomers);
         }
 
-        public ActionResult Details(int id) {
-            var customer = Customers.SingleOrDefault(x => x.Id == id);
+        public ActionResult Details(int id)
+        {
+            var customer = _context.Customers.Find(id);
             if (customer == null)
                 return HttpNotFound();
             return View(customer);
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            _context.Dispose();
+            base.Dispose(disposing);
         }
     }
 }
